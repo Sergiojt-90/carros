@@ -8,6 +8,4 @@ from cars.views import cars_view, template_bootstrap
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cars/',cars_view, name='cars_list'),
-    path('template/', template_bootstrap)
-
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

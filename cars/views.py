@@ -5,7 +5,7 @@ from cars.models import Car
 
 # Create your views here.
 def cars_view(request):
-    cars = Car.objects.all().order_by()
+    cars = Car.objects.all().order_by('model')
     
     search = request.GET.get('search')
 

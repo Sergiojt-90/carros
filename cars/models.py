@@ -17,7 +17,7 @@ class Car(models.Model):
     factory_year = models.IntegerField(verbose_name="Ano de Fabricação")
     model_year = models.IntegerField(blank=True, null=True, verbose_name="Ano do Modelo")
     value = models.FloatField(blank=True, null=True, verbose_name="Valor")
-
+    photo = models.ImageField(upload_to='cars/', blank=True, null=True, verbose_name="Foto")
 
     def __str__(self):
         return self.model
