@@ -28,6 +28,17 @@ def new_cars_view(request):
             
             return redirect('cars_list')
         
+        else:
+            context = {'new_car_form': new_car_form }
+            #return HttpResponse('Formulário inválido')
+            #return render(request, 'new_car.html', context)
+
+            return render(
+                request,
+                'new_car.html',
+                {'new_car_form': new_car_form}
+            )
+        
             
     else:
         new_car_form = CarModelForm()
